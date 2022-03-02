@@ -1,0 +1,179 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; }
+
+html {
+  font-size: 62.5%; }
+
+.mainBox {
+  display: flex; }
+
+#messageBox {
+  animation: 1s; }
+
+.leftBox {
+  padding: 0.2rem;
+  background-color: #F6F6F6;
+  width: 30vw !important;
+  min-height: 100vh;
+  position: fixed; }
+  .leftBox .logoBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem; }
+    .leftBox .logoBox .logoText {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #464646;
+      text-decoration: none; }
+      .leftBox .logoBox .logoText .bookText {
+        font-family: 'Forte';
+        color: #0075ff;
+        font-size: 3rem; }
+  .leftBox .inputBooksBox {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .leftBox .inputBooksBox .formItem div {
+      margin: 1.7rem 0.5rem; }
+    .leftBox .inputBooksBox .formItem .inputBox {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .leftBox .inputBooksBox .formItem .inputBox input {
+        font-size: 2rem; }
+      .leftBox .inputBooksBox .formItem .inputBox .inputBooks {
+        background-color: #ffffff;
+        padding: 1.1rem;
+        border: none;
+        width: 100%;
+        box-shadow: 2px 7px 15px #E5E5E5; }
+        .leftBox .inputBooksBox .formItem .inputBox .inputBooks:focus {
+          transform: scale(1.009);
+          outline: 0.15rem solid #fff;
+          border-bottom: 0.35rem solid #0075ff; }
+    .leftBox .inputBooksBox .formItem .selectTypeBox .saveBookBtn,
+    .leftBox .inputBooksBox .formItem .saveBtn .saveBookBtn {
+      font-size: 1.8rem;
+      color: #EDEDED;
+      font-weight: 500;
+      padding: 1rem 4rem;
+      border: 0 solid #707070;
+      border-radius: 0.5rem;
+      background-color: #5E5E5E;
+      box-shadow: 0.2rem 0.7rem 1.5rem #E5E5E5; }
+      .leftBox .inputBooksBox .formItem .selectTypeBox .saveBookBtn:hover, .leftBox .inputBooksBox .formItem .selectTypeBox .saveBookBtn:active,
+      .leftBox .inputBooksBox .formItem .saveBtn .saveBookBtn:hover,
+      .leftBox .inputBooksBox .formItem .saveBtn .saveBookBtn:active {
+        background-color: #0075ff;
+        color: #ffffff;
+        transform: scale(1.015);
+        transform: 0.06s; }
+    .leftBox .inputBooksBox .formItem .selectTypeBox label {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #8B8B8B;
+      margin-left: 0.5rem; }
+
+.rightBox {
+  margin-bottom: 10vh;
+  width: 70vw;
+  margin-left: 30vw !important; }
+  .rightBox .topRightBox {
+    min-height: 10vh;
+    display: flex;
+    background-color: #ffffff;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0; }
+    .rightBox .topRightBox .topElement .search {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      background-color: #F6F6F6;
+      border-radius: 2rem;
+      padding: 0.2rem 1rem;
+      line-height: 3rem; }
+      .rightBox .topRightBox .topElement .search input {
+        width: 50vw;
+        border: none;
+        font-size: 1.6rem; }
+        .rightBox .topRightBox .topElement .search input:focus {
+          outline: none; }
+      .rightBox .topRightBox .topElement .search .searchElement {
+        margin: 0.2rem;
+        background-color: #F6F6F6; }
+        .rightBox .topRightBox .topElement .search .searchElement .searchIcon {
+          color: #5e5e5e; }
+    .rightBox .topRightBox .topElement .topButtons {
+      font-size: 1.8rem;
+      font-weight: 100;
+      border: none;
+      background-color: #ffffff; }
+  .rightBox .contentBox .contentHeader {
+    min-height: 15vh;
+    background-color: #ffffff;
+    align-items: center;
+    padding: 0rem 4rem;
+    position: sticky;
+    top: 10vh; }
+    .rightBox .contentBox .contentHeader h1 {
+      text-align: center;
+      padding: 2rem 0rem; }
+    .rightBox .contentBox .contentHeader h1 {
+      font-weight: 600;
+      color: #6B6B6B; }
+  .rightBox .contentBox .contentBody {
+    padding: 0rem 4rem; }
+    .rightBox .contentBox .contentBody .nothingNote {
+      color: rgba(226, 17, 17, 0.5);
+      font-size: 1.8rem;
+      padding: 2rem;
+      text-align: center; }
+
+table {
+  width: 100%;
+  display: block; }
+  table thead {
+    background-color: #0075ff; }
+  table tbody {
+    height: 300px;
+    display: inline-block;
+    width: 100%;
+    overflow-y: auto; }
+    table tbody tr {
+      border-bottom: 1px solid #ddd; }
+  table td,
+  table th {
+    width: 200px; }
+  table th {
+    font-size: 1.6rem;
+    padding: 1.2rem 1rem !important;
+    color: #ffffff; }
+  table td {
+    font-size: 1.3rem; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+.deleteButton {
+  padding: 0.5rem 2rem !important; }
+
+@media (max-width: 768px) {
+  .mainBox {
+    flex-direction: column; }
+    .mainBox .leftBox {
+      width: 100% !important;
+      position: relative !important; }
+    .mainBox .rightBox {
+      width: 100% !important;
+      margin-left: 0rem !important; } }
+
+@media (max-width: 576px) {
+  tbody {
+    height: 100px; } }

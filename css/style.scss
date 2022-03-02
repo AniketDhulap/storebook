@@ -1,0 +1,292 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+$mainColor:#F6F6F6;
+$secondaryColor:#5e5e5e;
+$thirdColor:#0075ff;
+$fontColor:#6B6B6B;
+
+
+$transition:0.2s all ease-out;
+
+.mainBox {
+  display: flex;
+
+}
+
+#messageBox {
+  animation: 1s;
+}
+
+.leftBox {
+  padding: 0.2rem;
+  background-color: $mainColor;
+  width: 30vw !important;
+  min-height: 100vh;
+  position: fixed;
+
+
+  .logoBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+
+    .logoText {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #464646;
+      text-decoration: none;
+
+      .bookText {
+        font-family: 'Forte';
+        color: $thirdColor;
+        font-size: 3rem;
+      }
+    }
+  }
+
+
+  .inputBooksBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .formItem {
+
+      div {
+        margin: 1.7rem 0.5rem;
+      }
+
+
+      .inputBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        input {
+          font-size: 2rem;
+        }
+
+        .inputBooks {
+          background-color: #ffffff;
+          padding: 1.1rem;
+          border: none;
+          width: 100%;
+          box-shadow: 2px 7px 15px #E5E5E5;
+
+
+          &:focus {
+            transform: scale(1.009);
+            outline: 0.15rem solid #fff;
+            border-bottom: 0.35rem solid $thirdColor;
+          }
+        }
+      }
+
+      .selectTypeBox,
+      .saveBtn {
+        .saveBookBtn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.8rem;
+          color: #EDEDED;
+          font-weight: 500;
+          padding: 1rem 4rem;
+          border: 0 solid #707070;
+          border-radius: 0.5rem;
+          background-color: #5E5E5E;
+          box-shadow: 0.2rem 0.7rem 1.5rem #E5E5E5;
+
+          &:hover,
+          &:active {
+            background-color: $thirdColor;
+            color: #ffffff;
+            transform: scale(1.015);
+            transform: 0.06s;
+          }
+        }
+      }
+
+      .selectTypeBox {
+        label {
+          font-size: 1.6rem;
+          font-weight: bold;
+          color: #8B8B8B;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.rightBox {
+  margin-bottom: 10vh;
+  width: 70vw;
+  margin-left: 30vw !important;
+
+  .topRightBox {
+    min-height: 10vh;
+    display: flex;
+    background-color: #ffffff;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+
+    .topElement {
+
+      .search {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        background-color: $mainColor;
+        border-radius: 2rem;
+        padding: 0.2rem 1rem;
+        line-height: 3rem;
+
+        input {
+          width: 50vw;
+          border: none;
+          font-size: 1.6rem;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .searchElement {
+          margin: 0.2rem;
+          background-color: $mainColor;
+
+          .searchIcon {
+            color: #5e5e5e;
+          }
+
+        }
+      }
+
+      .topButtons {
+        font-size: 1.8rem;
+        font-weight: 100;
+        border: none;
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  .contentBox {
+    .contentHeader {
+      h1 {
+        text-align: center;
+        padding: 2rem 0rem;
+      }
+
+      min-height: 15vh;
+      background-color: #ffffff;
+      align-items: center;
+      padding: 0rem 4rem;
+      position: sticky;
+      top: 10vh;
+
+      h1 {
+        font-weight: 600;
+        color: $fontColor;
+      }
+    }
+
+    .contentBody {
+      padding: 0rem 4rem;
+
+      .nothingNote {
+        color: rgba(226, 17, 17, 0.5);
+        font-size: 1.8rem;
+        padding: 2rem;
+        text-align: center;
+      }
+
+    }
+  }
+}
+
+
+table {
+  width: 100%;
+  display: block;
+
+  thead {
+    background-color: $thirdColor;
+
+  }
+
+  tbody {
+    height: 300px;
+    display: inline-block;
+    width: 100%;
+    overflow-y: auto;
+
+    tr {
+      border-bottom: 1px solid #ddd;
+    }
+  }
+
+  td,
+  th {
+    width: 200px;
+  }
+
+  th {
+    font-size: 1.6rem;
+    padding: 1.2rem 1rem !important;
+    color: #ffffff;
+  }
+
+  td {
+
+    font-size: 1.3rem;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.deleteButton {
+  padding: 0.5rem 2rem !important;
+}
+
+
+@media (max-width:768px) {
+
+  .mainBox {
+    flex-direction: column;
+
+    .leftBox {
+      width: 100% !important;
+      position: relative !important;
+
+    }
+
+    .rightBox {
+      width: 100% !important;
+      margin-left: 0rem !important;
+    }
+  }
+}
+
+@media (max-width:576px) {
+  tbody {
+    height: 100px;
+  }
+}
